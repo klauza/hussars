@@ -1,2 +1,3 @@
-# hussars
-This page is related to portfolio main website
+
+This is a repositorium related to the main portfolio page.
+
