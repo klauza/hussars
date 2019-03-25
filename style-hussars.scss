@@ -1,0 +1,164 @@
+@import './scss-hussars/general';
+@import './scss-hussars/main';
+@import './scss-hussars/nav';
+@import './scss-hussars/history';
+@import './scss-hussars/battles';
+@import './scss-hussars/unit';
+
+.customHeader{
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./img-hussars/main.jpg");;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    // background: linear-gradient(rgba(0, 0, 0, 0.8));
+    
+    
+}
+
+
+
+
+
+
+
+
+.customHeader .kontener ul{
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    left: 13%;
+   
+    width: 400px; 
+}
+
+.customHeader .kontener ul li{
+    text-align: center;
+    text-shadow: 0px 7px 2px #000000;
+      
+    transition: all 0.2s;
+}
+.customHeader .kontener ul li:hover{
+
+    
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,0.02) 1%,rgba(0,0,0,0.49) 40%,rgb(0, 0, 0) 50%,rgba(0,0,0,0.49) 60%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    
+}
+
+.customHeader .kontener ul li:hover,
+.customHeader .kontener ul li:nth-child(4):hover{
+    font-size: 1.9em;
+    transition: all 0.3s;
+    text-shadow: 0px 15px 8px #000000;
+}
+
+
+.customHeader .kontener ul li a,
+.customHeader .kontener ul li:nth-child(4){
+    display: block;    
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+   
+    letter-spacing: 12px;
+}
+.customHeader .kontener ul li:nth-child(4){
+    cursor: default;
+}
+
+#mobile-menu li,
+#mobile-menu li a{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /* parallax */
+.parallax-container {
+    min-height: 400px;
+    max-height: 400px;
+}
+
+
+
+
+
+
+ /* MOBILE WIDTH */
+@media(max-width: 992px){
+    
+    .nav-fixed ul{
+        padding: 0;
+    }
+    .nav-fixed div{
+        padding-left: 20px;
+    }
+    
+    section.splitScreen{
+        flex-direction: column; 
+    }
+    section.splitScreen .screen{
+        overflow: hidden;
+    }
+    section.splitScreen .screen:nth-child(3) .card-content{
+    padding: 55px 0 0 0;
+    width: 250%;
+    }
+    
+    section.splitScreen .screen .screenCard {
+        align-items: center;
+        justify-content: center;
+        
+        min-width: 600px;
+        
+    }
+    section.splitScreen .screen:hover .screenCard{
+        font-size: inherit;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-content .readMore{
+        right: 5%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
