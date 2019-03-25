@@ -1,0 +1,30 @@
+    /* Segment 1 */
+    .kontener{
+        margin: auto;
+        
+        width: 70%;
+        height: 100vh;
+        
+        position: relative;
+    }
+    
+    /* down arrow in main section */
+    .mainArrowDown{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 5px;
+        width: 100px;
+    
+    }
+    .mainArrowDown > *{
+        text-align: center;
+        color: #ffffff;
+        display: block;
+    }
+    .mainArrowDown i {
+        font-size: 55px;
+        text-shadow: 0px 12px;
+    }
+    /* -------------------------- */

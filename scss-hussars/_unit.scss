@@ -1,0 +1,226 @@
+
+ /*  UNIT  */
+ #test1,
+ #test2,
+ #test3,
+ #test4{
+     min-height: 750px;
+     position: relative;
+ }
+ 
+ .unit-tabs{
+ }
+ 
+ /* test 1 */
+ 
+ 
+ /*
+ #line-1{
+     position: absolute;
+     top: 45%;
+     right: 17%;
+     width: 0%;
+     height: 1px;
+     
+     background: rgba(0, 0, 0, 0.5);
+ }
+ #line-2{
+     position: absolute;
+     top: 14%;
+     left: 10%;
+     width: 18%;
+     height: 1px;
+     
+     background: rgba(0, 0, 0, 0.5);
+ }
+ @media(min-width: 1360px){
+     #line-2{
+         width: 25%;
+     }
+ }
+ 
+ #line-3{
+     position: absolute;
+     top: 50.5%;
+     left: 14%;
+     width: 28%;
+     height: 1px;
+     transform: rotate(-13deg);
+     background: rgba(0, 0, 0, 0.5);
+ }
+ @media(min-width: 1360px){
+     #line-3{
+         top: 48.5%;
+         left: 18%;
+         width: 28%;
+         transform: rotate(-13deg);
+     }
+ }
+ 
+ #line-1-loading{
+     position: absolute;
+     top: 45%;
+     right: 17%;
+     width: 0%;
+     height: 1px;
+     transform: rotate(-180deg);
+     background: #ff0000;
+     transition: width 0.5s;
+     
+ }
+ 
+ .saberBoxContainer:hover ~ #line-1{
+     width: 25%;
+     transition: width 0.5s;
+ }
+ 
+ .saberBoxContainer:hover ~ #line-1-loading{
+     width: 25%;
+     transition: width: 0.5s;
+ }
+ */
+ /* - - - - - */
+ /*
+ .saberBoxContainer:hover + .imeg{
+     opacity: 0.6;
+     
+     transition: opacity 0.5s;
+ }
+ */
+ 
+ 
+ .imeg{
+     width: 350px;
+     position: absolute;
+     top: 10%;
+     left: 50%;
+     transform: translateX(-50%);
+     
+     transition: opacity 0.5s;
+ }
+ 
+ 
+ 
+ 
+ 
+ /* weapon Containers */
+ #test1 div.col .saberBoxContainer{
+     position: absolute;
+     top: 46%;
+     left: 70%;
+ }
+ #test1 div.col .spearBoxContainer{
+     position: absolute;
+     top: 15%;
+     left: 10%;
+ }
+ #test1 div.col .firearmBoxContainer{
+     position: absolute;
+     top: 55%;
+     left: 14%;
+ }
+ 
+ 
+ 
+ .boxContent{
+     width: 100px;
+     max-height: 25px;
+     line-height: 25px;
+     background-color: lightblue;
+     border: 1px solid black;
+     -webkit-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.55);
+     -moz-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.55);
+     box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.55);
+     
+     
+     overflow: hidden;
+     transition: width 0.25s ease-in-out 0.5s, max-height 0.5s;
+ }
+ 
+ .boxContent#open{
+     max-height: 250px;
+     width: 200px;
+     
+     transition: max-height 0.5s ease-in-out 0.5s, width 0.25s;
+ }
+ 
+ .show-more{
+     text-align: center;
+     width: 100px;
+     
+     font-weight: 900;
+     transition: all 0.8s;
+     cursor: default;
+ }
+ .show-more:hover{
+     
+     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+     transition: all 0.8s;
+     
+ }
+ 
+ 
+ 
+ 
+ 
+ /* SVG */
+ .svg-test{
+     width: 350px;
+     height: 496px;
+     position: absolute;
+     top: 10%;
+     left: 50%;
+     transform: translateX(-50%);
+     
+     fill: rgba(0, 0, 0, 0);
+     
+     
+ }
+ #saber, #spear_pike, #firearm{
+     fill: rgba(0, 0, 0, 0);
+ }
+ 
+ /* TEST - 2 */
+ .armour{
+     position: absolute;
+     top: 0;
+     right: 0%;
+     max-width: 25%;
+     opacity: 0;
+     transition: all 0.3s;
+ }
+ 
+ .armour-transition{
+     opacity: 1;
+     right: 100%;
+     transform: translateX(100%);
+ /*    transition-delat: */
+ }
+ 
+ #test2 div div div p{
+     line-height: 2em;
+     transition: all 2s;
+ }
+ 
+ /* TEST - 3 */
+ #test3 div div div p{
+     line-height: 2em;
+     transition: all 2s;
+    
+ }
+ @media(min-width:992px){
+     .wings{
+         position: absolute;
+         bottom: 0;
+         left: 0%;
+         max-width: 35% !important;
+         opacity: 0;
+         transition: all 0.3s;
+     }
+     .wings-transition{
+         opacity: 1;
+         left: 100%;
+         transform: translateX(-102%);
+     }
+ }
+ 

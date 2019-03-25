@@ -1,0 +1,134 @@
+
+    /* BATTLES SPLIT SCREEN */
+    .splitScreen{
+        position: relative;
+        height: 100vh;
+        display: flex;
+        
+    }
+    
+    section.splitScreen .screen{
+        
+        display: flex;
+        flex: 1;
+        transition: 1s;
+        
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+    }
+    section.splitScreen .screen:nth-child(3) .card-content{
+        padding-bottom: 50px;
+    }
+    
+    
+    .screenJS{
+        background: black;
+    }
+    
+    section.splitScreen .screen .screenCard{
+        
+        max-width: 300px;
+        text-align: center;
+        transition: all 1s;
+    }
+    
+    
+    
+    .screenCard .card{
+        position: relative;
+        min-width: 200px;
+    }
+    .card-content .readMore{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        
+        border-radius: 5%;
+        padding: 5px 10px;
+        background: #252626;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .screenContent{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        
+        visibility: hidden;
+        opacity: 0;
+        overflow-y: scroll;
+        transition: opacity 1s;
+    }
+    
+    #backStoryButton{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 100px;
+        height: 100px;
+        background: black;
+        color: white;
+        border-radius: 50%;
+        z-index: 99;
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+    #backStoryButton i{
+        display: grid;
+        place-items: center;    
+      
+        
+        font-size: 80px;
+     
+       
+        height: 100%;
+    }
+    
+    @media(max-width: 992px){
+        #backStoryButton{
+            top: 85%;
+            left: 50%;
+            width: 85px;
+            height: 85px;
+            transform: translateX(-50%) rotateY(180deg);
+        }
+        #backStoryButton i{        
+            font-size: 70px;
+        }
+    }
+    
+    
+    
+    
+    
+    /* additional margin-bottom in bottom of stories */
+    .additional-margin-custom{
+        margin-bottom: 300px;
+    }
+    
+    
+    
+    
+    /* animation split screen*/
+    
+    section.splitScreen .screen:hover{
+        flex: 4;
+    }
+    section.splitScreen .screen:hover .screenCard{
+        max-width: 500px;
+        font-size: 1.8em;
+    }
+    
+    
+    section.splitScreen .screen:hover a{
+        font-size: 1em;
+    }
+    
+    
+    
