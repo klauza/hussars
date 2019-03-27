@@ -5,39 +5,35 @@ $(document).ready(function(){
     $('.tabs').tabs();
     $('.tooltipped').tooltip();
     $('input#input_text, textarea#textarea2').characterCounter();
-
-        
-    window.onresize = function()
-    {
-    document.location.reload(true);
+//
+//  
+//  
+    window.onresize = function(){
+      document.location.reload(true);
     }
       
-    
-     
     /* battles section - siblings color change on hover*/
     $(".screen").hover(function() {
-        $(this).siblings().addClass("screenJS");
+      $(this).siblings().addClass("screenJS");
     },                 function() {
-        $(this).siblings().removeClass("screenJS");
+      $(this).siblings().removeClass("screenJS");
     });
-    /*----------------------------------------------*/
-    
-    /* tooltip About - need fix*/
-   // $('li.tooltipped').data('tooltip', 'something');
-    
-    /* scroll */
-    var scrollLink = $('.scroll');
-    
+//
+//  
+//  
+    // section click function
+    var scrollLink = $('.scroll'); 
     
     scrollLink.click(function(d){
-        d.preventDefault();
-        $('body, html').animate({
-            scrollTop: $(this.hash).offset().top - 50
-        }, 1000 );
+      d.preventDefault();
+      $('body, html').animate({
+        scrollTop: $(this.hash).offset().top - 50
+      }, 1000 );
     });
-    /*----------------------------------------------*/
-    var scrollHistory = $('#history').offset().top;
-    // console.log('top position of history section: ', scrollHistory);
+//
+//  
+//  
+    var scrollHistory = $('#history').offset().top; // top position of #history
     
     if(window.innerWidth > 992){
        $(window).scroll(function(){   //.on('scroll', function())
@@ -50,49 +46,31 @@ $(document).ready(function(){
     } else {
        $('.nav-fixed').fadeOut(); 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-/* auto-ACTIVATE NAVIGATION-BAR */
-    
-    $(window).scroll(function(){
-        
-        var scrollbarLocation = $(this).scrollTop();
-        //console.log(scrollbarLocation);
-        
-        scrollLink.each(function(){ /* for each section */
-            var sectionOffset = $(this.hash).offset().top - 150;
-            if (sectionOffset <= scrollbarLocation ){
-                $(this).parent().addClass('nav-active'); /* parent of this link - ( so it's li -> list item) */
-                $(this).parent().siblings().removeClass('nav-active'); 
-            }
-           
-        });
-        
-        
+//
+//  
+//  
+  /* highlight navbar */
+  $(window).scroll(function(){
+    var scrollbarLocation = $(this).scrollTop();
+
+    scrollLink.each(function(){
+      var sectionOffset = $(this.hash).offset().top - 150;
+      if (sectionOffset <= scrollbarLocation ){
+        $(this).parent().addClass('nav-active'); /* parent of this link - ( so it's li -> list item) */
+        $(this).parent().siblings().removeClass('nav-active'); 
+      }
     });
-    
-    
-    
-
-    
-    
-    
-    
-//     click on Read more button - battles section
+  });
+//
+//  
+//  
+  //click on Read more button - battles section
     function readBattle(){
-
         readMore = document.querySelectorAll('a.readMore');
         var scrollBattles = $('#battles').offset().top;
         var backButton = document.getElementById('backStoryButton');
 
         for(var i = 0; i < readMore.length; i++) {
-
             readMore[i].addEventListener('click', function(e){
                 e.preventDefault();
 
@@ -101,62 +79,52 @@ $(document).ready(function(){
                     scrollTop: scrollBattles -50
                 }, 400 ); 
 
-                var temp2 = e.target.parentNode.parentNode.parentNode.parentNode.nextSibling.nextSibling; //target parent 'row' and move 1 down
-
+                var screenCont = e.target.parentNode.parentNode.parentNode.parentNode.nextSibling.nextSibling; //target parent 'row' and move 1 down
+                
                 //scroll to top of .screenContent while clicking the story
-                 $(temp2).animate({
+                 $(screenCont).animate({
                     scrollTop: 0
                 }, 600 ); 
 
                 //temp3 = .screen
-                var temp3 = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+                // var temp3 = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 
                 //show clicked story
-                temp2.style.opacity = "1";
-                temp2.style.visibility = "visible"; 
-                temp2.style.zIndex = "5"; 
+                screenCont.style.opacity = "1";
+                screenCont.style.visibility = "visible"; 
+                screenCont.style.zIndex = "5"; 
                 backButton.style.opacity = "1"; 
                 backButton.style.transition = "opacity 1s";
-
+                $('body, html').css("overflow","hidden");
                 
+                const leaveStory = () => {
+                    screenCont.style.opacity = "0";
+                    screenCont.style.visibility = "hidden"; 
+                    screenCont.style.zIndex = "1"; 
+                    backButton.style.opacity = "0";
+                    backButton.style.transition = "opacity 0s";
+                    $('body, html').css("overflow","auto");
+                }
                 //hide clicked story on mouseAway
-                temp2.addEventListener("mouseleave", function() {   
+               
 
-                    this.style.opacity = "0";
-                    this.style.visibility = "hidden"; 
-                    this.style.zIndex = "1"; 
-                    backButton.style.opacity = "0";
-                    backButton.style.transition = "opacity 0s";
+                backButton.addEventListener('click', function(){  //Mobile
+                  leaveStory();
                 });
-
-                backButton.addEventListener('click', function(e){  //Mobile
-
-                    temp2.style.opacity = "0";
-                    temp2.style.visibility = "hidden"; 
-                    temp2.style.zIndex = "1";
-                    backButton.style.opacity = "0";
-                    backButton.style.transition = "opacity 0s";
-                });
-
             });
         }
-
     }
-    
     readBattle();
-    /* ---------------------------------------------------------------------- */
+//
+//
+//
     /* Tabs */
-    
-    
     var content = document.querySelectorAll(".boxContent");
     var button = document.querySelectorAll(".show-more");
     var descriptionBoxContainer = document.querySelectorAll('.boxContainerJS');
     var svgFill = document.querySelectorAll('.svg-fill');
     
-    
-    
-
-    // Highlight .this weapon accessories
+    // Highlight weapon
     var containerArray = Array.from(descriptionBoxContainer);
     
     containerArray.forEach(function(theButton, i) {
