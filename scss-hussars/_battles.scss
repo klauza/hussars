@@ -79,6 +79,9 @@
         opacity: 0;
         transform: rotateY(180deg);
     }
+    #backStoryButton :hover{
+      cursor: pointer;
+    }
     #backStoryButton i{
         display: grid;
         place-items: center;    

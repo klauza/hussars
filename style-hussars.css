@@ -214,6 +214,10 @@ section.splitScreen .screen .screenCard {
           transform: rotateY(180deg);
 }
 
+#backStoryButton :hover {
+  cursor: pointer;
+}
+
 #backStoryButton i {
   display: -ms-grid;
   display: grid;
@@ -469,6 +473,23 @@ section.splitScreen .screen:hover a {
     -webkit-transform: translateX(-102%);
             transform: translateX(-102%);
   }
+}
+
+/* materialize.css EDIT */
+.indicator {
+  background-color: rgba(0, 49, 255, 0.57) !important;
+}
+
+.tabs .tab a.active {
+  background-color: rgba(173, 216, 230, 0.51) !important;
+}
+
+.tabs .tab a {
+  color: #000000 !important;
+}
+
+.tabs .tab {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .customHeader {
