@@ -56,27 +56,32 @@ export const app = () => {
 //  
   //click on Read more button - battles section
    
-        let readMore = document.querySelectorAll('a.readMore');
+        var readMore = document.querySelectorAll('a.readMore');
+        
         var scrollBattles = $('#battles').offset().top;
         var backButton = document.getElementById('backStoryButton');
 
-        for(var i = 0; i < readMore.length; i++) {
-            readMore[i].addEventListener('click', function(e){
-                e.preventDefault();
+        readMore.forEach((read, index) => {
+            read.addEventListener('click', function(e){
+                
+                let allShow = document.querySelectorAll('.screenContent');
+                let screenShow = allShow[index];
 
                 //hide navbar
                 let navLinks = document.querySelectorAll('.nav-fixed ul li a');
-                console.log(navLinks);
+                
                 navLinks.forEach((link) => link.style.display = "none");
                    //1. scroll to top of history section
                 $('body, html').animate({
                     scrollTop: scrollBattles -50
                 }, 400 ); 
 
-                var screenCont = e.target.parentNode.parentNode.parentNode.parentNode.nextSibling.nextSibling; //target parent 'row' and move 1 down
+               // var screenCont = screenShow; //target parent 'row' and move 1 down
+                
+               
                 
                 //scroll to top of .screenContent while clicking the story
-                 $(screenCont).animate({
+                 $(screenShow).animate({
                     scrollTop: 0
                 }, 600 ); 
 
@@ -85,18 +90,18 @@ export const app = () => {
                
 
                 //show clicked story
-                screenCont.style.opacity = "1";
-                screenCont.style.visibility = "visible"; 
-                screenCont.style.zIndex = "5"; 
+                screenShow.style.opacity = "1";
+                screenShow.style.visibility = "visible"; 
+                screenShow.style.zIndex = "5"; 
                 backButton.style.opacity = "1"; 
                 backButton.style.transition = "opacity 1s";
                 $('body, html').css("overflow","hidden");
                 
                 const leaveStory = () => {
                     navLinks.forEach((link) => link.style.display = "block");
-                    screenCont.style.opacity = "0";
-                    screenCont.style.visibility = "hidden"; 
-                    screenCont.style.zIndex = "1"; 
+                    screenShow.style.opacity = "0";
+                    screenShow.style.visibility = "hidden"; 
+                    screenShow.style.zIndex = "1"; 
                     backButton.style.opacity = "0";
                     backButton.style.transition = "opacity 0s";
                     $('body, html').css("overflow","auto");
@@ -107,8 +112,9 @@ export const app = () => {
                 backButton.addEventListener('click', function(){  //Mobile
                   leaveStory();
                 });
+                e.preventDefault();
             });
-        }
+        })
     
     
 //
