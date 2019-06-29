@@ -1,17 +1,7 @@
-$(document).ready(function(){
-    /*Materialize.js*/
-    $('.parallax').parallax();
-    $('.materialboxed').materialbox();
-    $('.tabs').tabs();
-    $('.tooltipped').tooltip();
-    $('input#input_text, textarea#textarea2').characterCounter();
-//
-//  
-//  
-    window.onresize = function(){
-      document.location.reload(true);
-    }
-      
+export const app = () => {
+
+
+  
     /* battles section - siblings color change on hover*/
     $(".screen").hover(function() {
       $(this).siblings().addClass("screenJS");
@@ -65,8 +55,8 @@ $(document).ready(function(){
 //  
 //  
   //click on Read more button - battles section
-    function readBattle(){
-        readMore = document.querySelectorAll('a.readMore');
+   
+        let readMore = document.querySelectorAll('a.readMore');
         var scrollBattles = $('#battles').offset().top;
         var backButton = document.getElementById('backStoryButton');
 
@@ -74,6 +64,10 @@ $(document).ready(function(){
             readMore[i].addEventListener('click', function(e){
                 e.preventDefault();
 
+                //hide navbar
+                let navLinks = document.querySelectorAll('.nav-fixed ul li a');
+                console.log(navLinks);
+                navLinks.forEach((link) => link.style.display = "none");
                    //1. scroll to top of history section
                 $('body, html').animate({
                     scrollTop: scrollBattles -50
@@ -88,6 +82,7 @@ $(document).ready(function(){
 
                 //temp3 = .screen
                 // var temp3 = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+               
 
                 //show clicked story
                 screenCont.style.opacity = "1";
@@ -98,6 +93,7 @@ $(document).ready(function(){
                 $('body, html').css("overflow","hidden");
                 
                 const leaveStory = () => {
+                    navLinks.forEach((link) => link.style.display = "block");
                     screenCont.style.opacity = "0";
                     screenCont.style.visibility = "hidden"; 
                     screenCont.style.zIndex = "1"; 
@@ -113,8 +109,8 @@ $(document).ready(function(){
                 });
             });
         }
-    }
-    readBattle();
+    
+    
 //
 //
 //
@@ -238,7 +234,7 @@ $(document).ready(function(){
     /* ---------------------------------------------------------------------- */
     //sidenav implementation
       $('.sidenav').sidenav();
-}); //end of document ready
+} //end of document ready
 
 /*
 setTimeout(function(){ 
