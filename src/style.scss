@@ -1,13 +1,14 @@
-@import './scss-hussars/general';
-@import './scss-hussars/main';
-@import './scss-hussars/nav';
-@import './scss-hussars/history';
-@import './scss-hussars/battles';
-@import './scss-hussars/unit';
-@import './scss-hussars/materialize-custom';
+@import './scss/general';
+@import './scss/main';
+@import './scss/nav';
+@import './scss/history';
+@import './scss/battles';
+@import './scss/unit';
+@import './scss/materialize-custom';
+
 
 .customHeader{
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./img-hussars/main.jpg");;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./media/main.jpg");;
     background-size: cover;
     background-position: center;
     height: 100vh;
