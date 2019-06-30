@@ -1,7 +1,32 @@
-- A brief description of the project
-This is a simple one-page app. Was created along with getting knowledge in Sass, materialize-css and jquery. The content of the website is about the most popular horse cavalry at XVI century - the mercenary which were well equipped and skilled and thus were winning most of the battles.
-- Installation instructions:
-webpack installed
-jquery, materialize included in html file at the start/end of file
+## About
+This is a simple one-page app. Was created while getting into Sass, materialize-css and jquery. The website itself is about the most popular horse cavalry in XVI century - the mercenary which were well equipped and skilled and thus they were winning most of the battles and that's all the glory is coming from.
 
- - current app version : `v2.0`
+
+## Dependencies
+**Webpack environment:** @babel/core, @babel/polyfill, @babel/preset-env, babel-loader, clean-webpack-plugin, css-loader, file-loader, html-loader, html-webpack-plugin, mini-css-extract-plugin, node-sass, optimize-css-assets-webpack-plugin, sass-loader, style-loader, webpack, webpack-cli, webpack-dev-server
+
+
+
+**materialize-css 1.0.0** included in html file
+
+**jquery 3.3.1** included in html file
+## Installation
+#### Initial setup
+- install NodeJS [from here](https://nodejs.org/en/)
+
+#### In main project dir, run:
+
+- `npm install` - gets all the necessary packages for this project
+
+- `npm start` - sets continuous **Sass compiler, local server** and **browser sync**
+
+
+## Deployment
+- `npm run build` - creates environment ready to deploy
+
+
+## Issues
+--
+
+## License
+MIT license

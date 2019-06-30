@@ -154,7 +154,7 @@ export const app = () => {
         but.addEventListener("click", function() {
      
             var tempBox = this.previousElementSibling;
-            console.log(tempBox);
+            //console.log(tempBox);
 
             if (tempBox.classList.contains("closed")){
                 this.innerHTML = "Show less";
