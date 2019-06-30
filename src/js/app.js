@@ -148,22 +148,27 @@ export const app = () => {
     /* ---------------------------------------------------------------------- */
     //Box content show & button inner text change - original
    
-     for(var i = 0; i < button.length; i++) {
-        button[i].addEventListener("click", function() {
+    
 
-            var tempBox = this.previousSibling.previousSibling;
-            
+      button.forEach((but) => {
+        but.addEventListener("click", function() {
+     
+            var tempBox = this.previousElementSibling;
+            console.log(tempBox);
 
-            if (tempBox.id == ""){
+            if (tempBox.classList.contains("closed")){
                 this.innerHTML = "Show less";
-                tempBox.id ="open";
+                tempBox.classList.remove("closed");
+                tempBox.classList.add("open");
             } else{ 
-                tempBox.id ="";
+                tempBox.classList.remove("open");
+                tempBox.classList.add("closed");
                 this.innerHTML = "Show more";
             }
+          })
             
-        });
-    };
+      });
+   
     
     
     
@@ -174,12 +179,14 @@ export const app = () => {
         
         var but = document.querySelectorAll(".show-more");  //grab button 
         
-            for(var j=0; j < box.length; j++){
 
-            if(event.target != box[j] && event.target.parentNode != box[j] && event.target.parentNode.parentNode != box[j] && event.target.parentNode.parentNode.parentNode != box[j] && event.target.parentNode.parentNode.parentNode.parentNode != box[j]) {
-                box2[j].id = ""; 
-                but[j].innerHTML = "Show more";
-           } 
+        for(var j=0; j < box.length; j++){
+
+          if(event.target != box[j] && event.target.parentNode != box[j] && event.target.parentNode.parentNode != box[j] && event.target.parentNode.parentNode.parentNode != box[j] && event.target.parentNode.parentNode.parentNode.parentNode != box[j]) {
+              box2[j].classList.remove("open"); 
+              box2[j].classList.add("closed");
+              but[j].innerHTML = "Show more";
+          } 
            
                 
                 
