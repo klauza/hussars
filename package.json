@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/klauza/hussars.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "klauza",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/klauza/hussars/issues"
   },
