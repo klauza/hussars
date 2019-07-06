@@ -3,7 +3,7 @@ This is a simple one-page app. Was created while getting into Sass, materialize-
 
 
 ## Dependencies
-**Webpack environment:** @babel/core, @babel/polyfill, @babel/preset-env, babel-loader, clean-webpack-plugin, css-loader, file-loader, html-loader, html-webpack-plugin, mini-css-extract-plugin, node-sass, optimize-css-assets-webpack-plugin, sass-loader, style-loader, webpack, webpack-cli, webpack-dev-server
+**Webpack environment:** @babel/core, @babel/polyfill, @babel/preset-env, babel-loader, clean-webpack-plugin, css-loader, file-loader, html-loader, html-webpack-plugin, mini-css-extract-plugin, node-sass, optimize-css-assets-webpack-plugin, sass-loader, style-loader, webpack, webpack-cli, webpack-dev-server, copy-webpack-plugin
 
 
 
