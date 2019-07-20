@@ -6,6 +6,42 @@
         height: 100vh;
         
         position: relative;
+        ul{
+          li:nth-child(1){
+            position: relative;
+            &::before{
+              content: '';
+              display: block;
+              height: 70px; width: 2px;
+              background: rgba(255, 255, 255, 0.75);
+              position: absolute; top: 0; right: 0;
+            }
+            &::after{
+              content: '';
+              display: block;
+              height: 2px; width: 70px;
+              background: rgba(255, 255, 255, 0.75);
+              position: absolute; top: 0; right: 0;
+            }
+          }
+          li:nth-child(4){
+            position: relative;
+            &::before{
+              content: '';
+              display: block;
+              height: 70px; width: 2px;
+              background: rgba(255, 255, 255, 0.75);
+              position: absolute; bottom: 0; left: 0;
+            }
+            &::after{
+              content: '';
+              display: block;
+              height: 2px; width: 70px;
+              background: rgba(255, 255, 255, 0.75);
+              position: absolute; bottom: 0; left: 0;
+            }
+          }
+        }
     }
     
     /* down arrow in main section */
