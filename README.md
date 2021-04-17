@@ -1,6 +1,6 @@
 ## About
 
-\*\*project compiles successfully; flagged as archived and public; added [live website](https://hussars-klauza.netlify.app/)
+**project compiles successfully; flagged as archived and public; added [live website](https://hussars-klauza.netlify.app/)**
 
 This is a simple one-page app. Created while getting into Sass, materialize-css and jquery.
 
